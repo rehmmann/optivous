@@ -55,7 +55,7 @@ export default function BookCall() {
 
             <div
               className="tidycal-embed"
-              data-path="team/robustflow/discovery-call"
+              data-path="rehmansajid/30-minute-meeting"
             ></div>
             <Script src="https://asset-tidycal.b-cdn.net/js/embed.js" async />
           </div>

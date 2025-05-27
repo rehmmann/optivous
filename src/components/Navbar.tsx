@@ -5,10 +5,10 @@ import Link from "next/link";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
+  { name: "About", href: "/#about" },
   { name: "Services", href: "/#services" },
   { name: "Case Studies", href: "/#case-studies" },
-  { name: "About", href: "/#about" },
-  { name: "Blog", href: "/#blog" },
+  { name: "FAQ", href: "/#faq" },
 ];
 
 export default function Navbar() {
@@ -69,7 +69,7 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-semibold leading-6 hover:text-blue-600 transition-colors"
+              className="text-base font-semibold leading-6 hover:text-blue-600 transition-colors"
             >
               {item.name}
             </Link>

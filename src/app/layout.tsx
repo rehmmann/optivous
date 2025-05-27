@@ -13,15 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Optivous | AI & Data Solutions",
+  title: "Optivous | Sales, Marketing & CRM Systems for Digital Agencies",
   description:
-    "Professional AI automation and data services to transform your business. We specialize in custom AI solutions and comprehensive data analytics.",
+    "We help digital agencies book more meetings, sell more offers, and minimize bloat with automated sales, marketing, and CRM systems. Streamline your agency's growth with proven, done-for-you solutions.",
   keywords:
-    "AI automation, data services, data analytics, artificial intelligence, business automation",
+    "digital agency, sales systems, marketing automation, CRM automation, agency systems, book more meetings, agency growth, project management automation, lead generation, client management",
   openGraph: {
-    title: "Optivous | AI & Data Solutions",
+    title: "Optivous | Sales, Marketing & CRM Systems for Digital Agencies",
     description:
-      "Professional AI automation and data services to transform your business",
+      "Automated sales, marketing, and CRM systems for digital agencies. Book more meetings, sell more offers, and streamline your agency's growth.",
     type: "website",
   },
 };
@@ -33,6 +33,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

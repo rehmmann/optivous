@@ -1,4 +1,9 @@
-import { CodeBracketIcon, ChartBarIcon } from "@heroicons/react/24/outline";
+import {
+  UserGroupIcon,
+  ChartBarIcon,
+  PresentationChartLineIcon,
+  ClipboardDocumentListIcon,
+} from "@heroicons/react/24/outline";
 
 interface ServiceCardProps {
   title: string;
@@ -37,26 +42,34 @@ const ServiceCard = ({
 export default function ServicesOverview() {
   const services = [
     {
-      title: "AI Automation",
+      title: "Sales Systems",
       description:
-        "Slow, manual processes could be costing you time and money. We can help you by:",
+        "Automatic lead acquisition systems that use AI to book meetings on your calendar",
       benefits: [
-        " Prioritizing your most repetitive, expensive or painful processes and automating them",
-        "Building intelligent automations that free you up to focus on more important things",
-        "Implementing secure, custom AI solutions that help you scale and move faster",
+        "Hands-off growth systems that convert prospects into clients",
       ],
-      icon: <CodeBracketIcon className="w-7 h-7 text-blue-600" />,
+      icon: <PresentationChartLineIcon className="w-7 h-7 text-blue-600" />,
     },
     {
-      title: "Data Integration",
+      title: "Marketing Systems",
       description:
-        "Even if your data is messy and scattered, we'll help you bring it all into one place. Then we:",
+        "Complete done-for-you inbound marketing systems that work on autopilot:",
       benefits: [
-        " Combine business context and data analysis to generate deep insights from your data ",
-        "Set up reports, dashboards and visualizations that YOUR business needs",
-        "Automate tedious, repetitive and error-prone reporting processes",
+        "Lead nurturing sequences that engage prospects autonomously",
+        "Automated content distribution across multiple channels",
       ],
       icon: <ChartBarIcon className="w-7 h-7 text-blue-600" />,
+    },
+    {
+      title: "Project Management",
+      description:
+        "Automate your client and project management with CRM systems that keep your agency organized and responsive.",
+      benefits: [
+        "Automated CRM workflows to track leads, clients, and projects",
+        "Automated reminders and task assignments for your team",
+        "Pipeline and project status dashboards for full visibility",
+      ],
+      icon: <ClipboardDocumentListIcon className="w-7 h-7 text-blue-600" />,
     },
   ];
 
@@ -64,8 +77,11 @@ export default function ServicesOverview() {
     <section className="pt-4 pb-16 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-14">
         <h2 className="text-4xl font-bold mb-5">Our Services</h2>
+        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          Book more meetings, sell more offers and minimise bloat
+        </p>
       </div>
-      <div className="grid md:grid-cols-2 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => (
           <ServiceCard key={index} {...service} />
         ))}

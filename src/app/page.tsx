@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ServicesOverview from "@/components/ServicesOverview";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -49,12 +50,16 @@ export default function Home() {
               </div>
             </div>
             <div className="flex-1 w-full max-w-xl mx-auto lg:mx-0">
-              <img
-                src="/jason-goodman-bzqU01v-G54-unsplash.jpg"
-                alt="Digital agency team collaborating"
-                className="rounded-2xl shadow-xl object-cover w-full h-80 lg:h-96"
-                style={{ objectPosition: "center" }}
-              />
+              <div className="relative h-80 lg:h-96">
+                <Image
+                  src="/jason-goodman-bzqU01v-G54-unsplash.jpg"
+                  alt="Digital agency team collaborating"
+                  fill
+                  priority
+                  className="rounded-2xl shadow-xl object-cover"
+                  style={{ objectPosition: "center" }}
+                />
+              </div>
             </div>
           </div>
         </div>
@@ -126,7 +131,7 @@ export default function Home() {
                 </div>
                 <p className="text-gray-600 break-words">
                   Talk with a real systems engineer and discuss your project
-                  requirements and objectives. We'll listen closely to
+                  requirements and objectives. We&apos;ll listen closely to
                   understand your vision and goals.
                 </p>
               </div>
@@ -141,9 +146,9 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="text-gray-600 break-words">
-                  Based on your consultation, we'll provide a detailed scope,
-                  including itemized steps, timeline, budget, and possible
-                  modifications to your system.
+                  Based on your consultation, we&apos;ll provide a detailed
+                  scope, including itemized steps, timeline, budget, and
+                  possible modifications to your system.
                 </p>
               </div>
 
@@ -157,9 +162,9 @@ export default function Home() {
                   </h3>
                 </div>
                 <p className="text-gray-600 break-words">
-                  With the proposal agreed to, we'll schedule a kickoff meeting
-                  to introduce you to our team and get started on building your
-                  system.
+                  With the proposal agreed to, we&apos;ll schedule a kickoff
+                  meeting to introduce you to our team and get started on
+                  building your system.
                 </p>
               </div>
             </div>
@@ -169,7 +174,7 @@ export default function Home() {
                 href="#contact"
                 className="rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-blue-500 transition-colors inline-block"
               >
-                Let's Chat
+                Let&apos;s Chat
               </a>
             </div>
           </div>

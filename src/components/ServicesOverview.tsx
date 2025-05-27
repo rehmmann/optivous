@@ -1,5 +1,4 @@
 import {
-  UserGroupIcon,
   ChartBarIcon,
   PresentationChartLineIcon,
   ClipboardDocumentListIcon,

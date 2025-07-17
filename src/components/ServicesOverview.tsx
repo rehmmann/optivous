@@ -39,51 +39,78 @@ const ServiceCard = ({
 };
 
 export default function ServicesOverview() {
-  const services = [
-    {
-      title: "Sales Systems",
-      description:
-        "Automatic lead acquisition systems that use AI to book meetings on your calendar",
-      benefits: [
-        "Hands-off growth systems that convert prospects into clients",
-      ],
-      icon: <PresentationChartLineIcon className="w-7 h-7 text-blue-600" />,
-    },
-    {
-      title: "Marketing Systems",
-      description:
-        "Complete done-for-you inbound marketing systems that work on autopilot:",
-      benefits: [
-        "Lead nurturing sequences that engage prospects autonomously",
-        "Automated content distribution across multiple channels",
-      ],
-      icon: <ChartBarIcon className="w-7 h-7 text-blue-600" />,
-    },
-    {
-      title: "Project Management",
-      description:
-        "Automate your client and project management with CRM systems that keep your agency organized and responsive.",
-      benefits: [
-        "Automated CRM workflows to track leads, clients, and projects",
-        "Automated reminders and task assignments for your team",
-        "Pipeline and project status dashboards for full visibility",
-      ],
-      icon: <ClipboardDocumentListIcon className="w-7 h-7 text-blue-600" />,
-    },
-  ];
+  // const services = [
+  //   {
+  //     title: "Sales Systems",
+  //     description:
+  //       "Automatic lead acquisition systems that use AI to book meetings on your calendar",
+  //     benefits: [
+  //       "Hands-off growth systems that convert prospects into clients",
+  //     ],
+  //     icon: <PresentationChartLineIcon className="w-7 h-7 text-blue-600" />,
+  //   },
+  //   {
+  //     title: "Marketing Systems",
+  //     description:
+  //       "Complete done-for-you inbound marketing systems that work on autopilot:",
+  //     benefits: [
+  //       "Lead nurturing sequences that engage prospects autonomously",
+  //       "Automated content distribution across multiple channels",
+  //     ],
+  //     icon: <ChartBarIcon className="w-7 h-7 text-blue-600" />,
+  //   },
+  //   {
+  //     title: "Project Management",
+  //     description:
+  //       "Automate your client and project management with CRM systems that keep your agency organized and responsive.",
+  //     benefits: [
+  //       "Automated CRM workflows to track leads, clients, and projects",
+  //       "Automated reminders and task assignments for your team",
+  //       "Pipeline and project status dashboards for full visibility",
+  //     ],
+  //     icon: <ClipboardDocumentListIcon className="w-7 h-7 text-blue-600" />,
+  //   },
+  // ];
 
   return (
-    <section className="pt-4 pb-16 px-4 max-w-7xl mx-auto">
+    <section className="pt-20 pb-24 px-4 max-w-7xl mx-auto">
       <div className="text-center mb-14">
-        <h2 className="text-4xl font-bold mb-5">Our Services</h2>
+        <h2 className="text-4xl font-bold mb-5">What We Deliver</h2>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Book more meetings, sell more offers and minimise bloat
+          World-class systems. Real growth. Results you can measure.
         </p>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {services.map((service, index) => (
-          <ServiceCard key={index} {...service} />
-        ))}
+        <ServiceCard
+          title="Growth Roadmaps"
+          description="Clear, actionable strategies to unlock your next level."
+          benefits={[
+            "Pinpointed growth levers",
+            "Tailored action plans",
+            "Expert guidance",
+          ]}
+          icon={<PresentationChartLineIcon className="w-7 h-7 text-blue-600" />}
+        />
+        <ServiceCard
+          title="Automated Systems"
+          description="Sales, marketing, and ops—built to scale, run, and win."
+          benefits={[
+            "Lead gen on autopilot",
+            "Seamless client delivery",
+            "Zero busywork",
+          ]}
+          icon={<ChartBarIcon className="w-7 h-7 text-blue-600" />}
+        />
+        <ServiceCard
+          title="Relentless Support"
+          description="We’re in your corner—optimizing, adapting, and driving results."
+          benefits={[
+            "Proactive improvements",
+            "Rapid response",
+            "Growth accountability",
+          ]}
+          icon={<ClipboardDocumentListIcon className="w-7 h-7 text-blue-600" />}
+        />
       </div>
     </section>
   );

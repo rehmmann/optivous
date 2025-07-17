@@ -4,12 +4,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactExperts from "@/components/ContactExperts";
 import FAQ from "@/components/FAQ";
-import CaseStudies from "@/components/CaseStudies";
+
 import {
   ClockIcon,
   WrenchScrewdriverIcon,
   CurrencyDollarIcon,
-  HandThumbUpIcon,
 } from "@heroicons/react/24/outline";
 
 export default function Home() {
@@ -22,30 +21,29 @@ export default function Home() {
           <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
             <div className="flex-1 text-center lg:text-left">
               <h1 className="text-5xl sm:text-6xl lg:text-5xl font-bold tracking-tight">
-                <span className="block text-gray-900">
-                  We build sales systems
-                </span>
+                <span className="block text-gray-900">Your Growth Partner</span>
                 <span className="block text-blue-600 mt-4">
-                  for digital agencies
+                  for B2B Leaders
                 </span>
               </h1>
               <p className="mt-8 text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
-                Our team helps digital agencies automate growth with effective
-                sales, marketing, and project management systems that put your
-                business on autopilot.
+                We don’t just build systems—we embed with your team as a
+                strategic partner, helping you scale, automate, and win. Our
+                mission is to drive sustainable growth for your B2B business,
+                together.
               </p>
               <div className="mt-14 flex gap-6 justify-center lg:justify-start">
                 <a
                   href="/book"
                   className="rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-blue-500 transition-colors"
                 >
-                  Book a call
+                  Partner With Us
                 </a>
                 <a
                   href="#services"
                   className="rounded-full border-2 border-gray-300 px-8 py-4 text-base font-semibold text-gray-700 shadow-lg hover:bg-gray-50 transition-colors"
                 >
-                  Learn More
+                  Our Approach
                 </a>
               </div>
             </div>
@@ -65,42 +63,39 @@ export default function Home() {
         </div>
 
         {/* Metrics Section */}
-        <div className="bg-blue-50 py-16">
+        <div className="bg-gray-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4 text-black">
-                Put your sales and marketing on autopilot
+                Proven Results. Real Impact.
               </h2>
+              <p className="text-lg text-gray-600">
+                Trusted by B2B leaders to deliver growth at scale.
+              </p>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+            <div className="flex flex-wrap justify-center gap-12 text-center">
               <div className="flex flex-col items-center">
                 <div className="flex justify-center mb-4">
                   <ClockIcon className="h-12 w-12 text-black" />
                 </div>
-                <p className="text-black font-bold text-4xl mb-2">7+</p>
-                <p className="text-gray-700">Years of experience</p>
+                <p className="text-black font-bold text-3xl mb-2">7+</p>
+                <p className="text-gray-700">Years Experience</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex justify-center mb-4">
                   <WrenchScrewdriverIcon className="h-12 w-12 text-black" />
                 </div>
-                <p className="text-black font-bold text-4xl mb-2">100+</p>
-                <p className="text-gray-700">Systems created</p>
+                <p className="text-black font-bold text-3xl mb-2">100+</p>
+                <p className="text-gray-700">Systems Built</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="flex justify-center mb-4">
                   <CurrencyDollarIcon className="h-12 w-12 text-blue-00" />
                 </div>
-                <p className="text-black font-bold text-4xl mb-2">$5M+</p>
-                <p className="text-gray-700">Saved for clients</p>
+                <p className="text-black font-bold text-3xl mb-2">$5M+</p>
+                <p className="text-gray-700">Client Revenue Generated</p>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="flex justify-center mb-4">
-                  <HandThumbUpIcon className="h-12 w-12 text-black" />
-                </div>
-                <p className="text-black font-bold text-4xl mb-2">100%</p>
-                <p className="text-gray-700">Satisfaction guaranteed</p>
-              </div>
+              {/* Satisfaction guarantee commented out intentionally */}
             </div>
           </div>
         </div>
@@ -113,9 +108,9 @@ export default function Home() {
         <div id="how-it-works" className="bg-gray-50 py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <h2 className="text-4xl font-bold mb-5">How It Works</h2>
+              <h2 className="text-4xl font-bold mb-5">How Partnership Works</h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our proven process to help you succeed
+                Our collaborative process to accelerate your B2B growth
               </p>
             </div>
 
@@ -126,13 +121,13 @@ export default function Home() {
                     1
                   </div>
                   <h3 className="text-xl font-semibold mt-6">
-                    Free Consultation
+                    Growth Discovery
                   </h3>
                 </div>
                 <p className="text-gray-600 break-words">
-                  Talk with a real systems engineer and discuss your project
-                  requirements and objectives. We&apos;ll listen closely to
-                  understand your vision and goals.
+                  We dive deep into your goals, challenges, and vision.
+                  Together, we identify the biggest growth opportunities and
+                  align on a shared roadmap.
                 </p>
               </div>
 
@@ -142,13 +137,13 @@ export default function Home() {
                     2
                   </div>
                   <h3 className="text-xl font-semibold mt-6">
-                    Scoping & Proposal
+                    Co-Design & Strategy
                   </h3>
                 </div>
                 <p className="text-gray-600 break-words">
-                  Based on your consultation, we&apos;ll provide a detailed
-                  scope, including itemized steps, timeline, budget, and
-                  possible modifications to your system.
+                  We co-create a tailored growth plan, mapping out systems,
+                  automation, and strategies. You’re involved at every step as a
+                  true partner.
                 </p>
               </div>
 
@@ -158,13 +153,13 @@ export default function Home() {
                     3
                   </div>
                   <h3 className="text-xl font-semibold mt-6">
-                    Project Kickoff
+                    Growth Execution & Support
                   </h3>
                 </div>
                 <p className="text-gray-600 break-words">
-                  With the proposal agreed to, we&apos;ll schedule a kickoff
-                  meeting to introduce you to our team and get started on
-                  building your system.
+                  We implement, optimize, and support your systems—staying by
+                  your side as your growth partner, not just a vendor. Our
+                  success is measured by your results.
                 </p>
               </div>
             </div>
@@ -174,13 +169,13 @@ export default function Home() {
                 href="#contact"
                 className="rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-blue-500 transition-colors inline-block"
               >
-                Let&apos;s Chat
+                Start Your Growth Journey
               </a>
             </div>
           </div>
         </div>
 
-        <CaseStudies />
+        {/* <CaseStudies /> */}
 
         <div id="faq">
           <FAQ />

@@ -13,15 +13,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Optivous | Sales, Marketing & CRM Systems for Digital Agencies",
+  title: "Optivous | Growth Partner for B2B Leaders",
   description:
-    "We help digital agencies book more meetings, sell more offers, and minimize bloat with automated sales, marketing, and CRM systems. Streamline your agency's growth with proven, done-for-you solutions.",
+    "We help B2B leaders accelerate growth with proven systems, strategy, and relentless support. Partner with us to scale your business, automate sales, and win in your market.",
   keywords:
-    "digital agency, sales systems, marketing automation, CRM automation, agency systems, book more meetings, agency growth, project management automation, lead generation, client management",
+    "B2B growth, growth partner, sales automation, marketing automation, CRM, B2B strategy, business scaling, lead generation, client management",
   openGraph: {
-    title: "Optivous | Sales, Marketing & CRM Systems for Digital Agencies",
+    title: "Optivous | Growth Partner for B2B Leaders",
     description:
-      "Automated sales, marketing, and CRM systems for digital agencies. Book more meetings, sell more offers, and streamline your agency's growth.",
+      "Partner with Optivous to accelerate B2B growth. We deliver systems, strategy, and support to help you scale, automate, and win.",
     type: "website",
   },
 };

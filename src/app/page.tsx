@@ -139,7 +139,7 @@ export default function Home() {
             <div className="mb-16">
               <p className="text-xs font-mono tracking-widest text-blue-400 uppercase mb-5">PROSPECTING VS. INFRASTRUCTURE</p>
               <h2 className="text-4xl lg:text-5xl font-bold">Searching vs. Being Found</h2>
-              <p className="mt-4 text-gray-500 font-mono text-sm">The best firms don't prospect. Their ideal clients route through them.</p>
+              <p className="mt-4 text-gray-500 font-mono text-sm">The best firms don&apos;t prospect. Their ideal clients route through them.</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-800 overflow-hidden">

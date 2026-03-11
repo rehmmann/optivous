@@ -1,190 +1,213 @@
-import Image from "next/image";
 import ServicesOverview from "@/components/ServicesOverview";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactExperts from "@/components/ContactExperts";
 import FAQ from "@/components/FAQ";
 
-import {
-  ClockIcon,
-  WrenchScrewdriverIcon,
-  CurrencyDollarIcon,
-} from "@heroicons/react/24/outline";
-
 export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="pt-20">
+      <main className="pt-20 bg-[#0a0a0a] text-white">
+
         {/* Hero Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32 lg:py-40">
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12">
-            <div className="flex-1 text-center lg:text-left">
-              <h1 className="text-5xl sm:text-6xl lg:text-5xl font-bold tracking-tight">
-                <span className="block text-gray-900">Your Growth Partner</span>
-                <span className="block text-blue-600 mt-4">
-                  for B2B Leaders
-                </span>
-              </h1>
-              <p className="mt-8 text-xl sm:text-2xl text-gray-600 max-w-3xl mx-auto lg:mx-0 leading-relaxed">
-                We don’t just build systems—we embed with your team as a
-                strategic partner, helping you scale, automate, and win. Our
-                mission is to drive sustainable growth for your B2B business,
-                together.
-              </p>
-              <div className="mt-14 flex gap-6 justify-center lg:justify-start">
-                <a
-                  href="/book"
-                  className="rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-blue-500 transition-colors"
-                >
-                  Partner With Us
-                </a>
-                <a
-                  href="#services"
-                  className="rounded-full border-2 border-gray-300 px-8 py-4 text-base font-semibold text-gray-700 shadow-lg hover:bg-gray-50 transition-colors"
-                >
-                  Our Approach
-                </a>
-              </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-52">
+          <div className="max-w-4xl">
+            <div className="mb-10">
+              <span className="text-xs font-mono tracking-widest text-blue-400 uppercase border border-blue-400/30 px-3 py-1.5">
+                INTRODUCTION INFRASTRUCTURE • NOT AN AGENCY
+              </span>
             </div>
-            <div className="flex-1 w-full max-w-xl mx-auto lg:mx-0">
-              <div className="relative h-80 lg:h-96">
-                <Image
-                  src="/jason-goodman-bzqU01v-G54-unsplash.jpg"
-                  alt="Digital agency team collaborating"
-                  fill
-                  priority
-                  className="rounded-2xl shadow-xl object-cover"
-                  style={{ objectPosition: "center" }}
-                />
-              </div>
+            <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-10">
+              <span className="block text-white">Banks route capital.</span>
+              <span className="block text-blue-400 mt-3">We route relationships.</span>
+            </h1>
+            <p className="text-base text-gray-500 mb-12 max-w-xl font-mono leading-relaxed">
+              Pre-qualified introductions for firms that have moved past prospecting. 100+ routed.
+            </p>
+            <div className="flex gap-4 flex-wrap">
+              <a
+                href="https://cal.com/rehman.sajid/30min?overlayCalendar=true"
+                className="bg-blue-500 px-8 py-4 text-sm font-semibold text-white hover:bg-blue-400 transition-colors tracking-wider uppercase font-mono"
+              >
+                Access the Connection Layer
+              </a>
+              <a
+                href="#network"
+                className="border border-gray-700 px-8 py-4 text-sm font-semibold text-gray-500 hover:text-white hover:border-gray-500 transition-colors tracking-wider uppercase font-mono"
+              >
+                How It Works
+              </a>
             </div>
+            <p className="mt-6 text-xs text-gray-700 font-mono tracking-widest uppercase">
+              No commitment required · 30-minute conversation
+            </p>
           </div>
         </div>
 
-        {/* Metrics Section */}
-        <div className="bg-gray-50 py-16">
+        {/* Metrics Bar */}
+        <div id="metrics" className="border-t border-b border-gray-800 py-12">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold mb-4 text-black">
-                Proven Results. Real Impact.
-              </h2>
-              <p className="text-lg text-gray-600">
-                Trusted by B2B leaders to deliver growth at scale.
-              </p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-12 text-center">
-              <div className="flex flex-col items-center">
-                <div className="flex justify-center mb-4">
-                  <ClockIcon className="h-12 w-12 text-black" />
-                </div>
-                <p className="text-black font-bold text-3xl mb-2">7+</p>
-                <p className="text-gray-700">Years Experience</p>
+            <div className="grid grid-cols-3 gap-8 text-center font-mono">
+              <div>
+                <div className="text-4xl lg:text-5xl font-bold text-blue-400">100+</div>
+                <div className="text-xs text-gray-600 mt-3 uppercase tracking-widest">Introductions Routed</div>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="flex justify-center mb-4">
-                  <WrenchScrewdriverIcon className="h-12 w-12 text-black" />
-                </div>
-                <p className="text-black font-bold text-3xl mb-2">100+</p>
-                <p className="text-gray-700">Systems Built</p>
+              <div className="border-l border-r border-gray-800">
+                <div className="text-4xl lg:text-5xl font-bold text-blue-400">87%</div>
+                <div className="text-xs text-gray-600 mt-3 uppercase tracking-widest">Qualification Rate</div>
               </div>
-              <div className="flex flex-col items-center">
-                <div className="flex justify-center mb-4">
-                  <CurrencyDollarIcon className="h-12 w-12 text-blue-00" />
-                </div>
-                <p className="text-black font-bold text-3xl mb-2">$5M+</p>
-                <p className="text-gray-700">Client Revenue Generated</p>
+              <div>
+                <div className="text-4xl lg:text-5xl font-bold text-blue-400">$5M+</div>
+                <div className="text-xs text-gray-600 mt-3 uppercase tracking-widest">Client Revenue Enabled</div>
               </div>
-              {/* Satisfaction guarantee commented out intentionally */}
             </div>
           </div>
         </div>
 
-        <div id="services">
+        {/* The Connection Layer */}
+        <div id="network" className="py-32 border-b border-gray-800">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-16">
+              <p className="text-xs font-mono tracking-widest text-blue-400 uppercase mb-5">THE CONNECTION LAYER</p>
+              <h2 className="text-5xl lg:text-6xl font-bold leading-tight">
+                The Right Clients.<br />Routed to You.
+              </h2>
+              <p className="mt-6 text-base text-gray-500 max-w-2xl font-mono leading-relaxed">
+                Recruitment firms, wealth managers, and biotech companies access a curated network of qualified opportunities—without prospecting teams, ad spend, or cold outreach.
+              </p>
+            </div>
+
+            <div className="border border-gray-800 overflow-hidden mb-14 divide-y divide-gray-800">
+              <div className="flex items-center gap-8 px-8 py-8 bg-gray-900/20 hover:bg-gray-900/40 transition-colors">
+                <div className="w-7 h-7 rounded-full border border-gray-700 flex items-center justify-center flex-shrink-0">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gray-600"></div>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1.5">Signal Layer</div>
+                  <p className="text-gray-400 text-sm leading-relaxed font-mono">
+                    Incoming buyer signals, intent data, and qualification triggers enter the system.
+                  </p>
+                </div>
+                <div className="text-5xl font-mono text-gray-800/60 font-bold flex-shrink-0 tabular-nums">01</div>
+              </div>
+              <div className="flex items-center gap-8 px-8 py-8 bg-blue-950/20 border-l-2 border-l-blue-500 relative">
+                <div className="absolute top-4 right-4">
+                  <span className="text-xs font-mono bg-blue-500/10 text-blue-400 px-2 py-1 border border-blue-400/20 tracking-widest">
+                    YOU ARE HERE
+                  </span>
+                </div>
+                <div className="w-7 h-7 rounded-full border border-blue-500/50 flex items-center justify-center flex-shrink-0">
+                  <div className="w-1.5 h-1.5 rounded-full bg-blue-400"></div>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-xs font-mono text-blue-400 uppercase tracking-widest mb-1.5">Routing Layer</div>
+                  <p className="text-gray-300 text-sm leading-relaxed font-mono">
+                    Real-time matching, qualification filtering, and pathway control—this is where we operate.
+                  </p>
+                </div>
+                <div className="text-5xl font-mono text-blue-900/80 font-bold flex-shrink-0 tabular-nums">02</div>
+              </div>
+              <div className="flex items-center gap-8 px-8 py-8 bg-gray-900/20 hover:bg-gray-900/40 transition-colors">
+                <div className="w-7 h-7 rounded-full border border-gray-700 flex items-center justify-center flex-shrink-0">
+                  <div className="w-1.5 h-1.5 rounded-full bg-gray-600"></div>
+                </div>
+                <div className="flex-1 min-w-0">
+                  <div className="text-xs font-mono text-gray-600 uppercase tracking-widest mb-1.5">Connection Layer</div>
+                  <p className="text-gray-400 text-sm leading-relaxed font-mono">
+                    Executed introductions, completed handoffs, and closed deals flow to you.
+                  </p>
+                </div>
+                <div className="text-5xl font-mono text-gray-800/60 font-bold flex-shrink-0 tabular-nums">03</div>
+              </div>
+            </div>
+
+            <p className="text-gray-700 text-xs max-w-3xl font-mono leading-relaxed uppercase tracking-widest">
+              Every qualified signal. Every matched connection. Every introduction—routed directly to you.
+            </p>
+          </div>
+        </div>
+
+        {/* Protocol Section */}
+        <div id="protocol">
           <ServicesOverview />
         </div>
 
-        {/* How It Works Section */}
-        <div id="how-it-works" className="bg-gray-50 py-16">
+        {/* Old Way vs New Way */}
+        <div className="py-32 border-b border-gray-800 bg-[#0a0a0a]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-14">
-              <h2 className="text-4xl font-bold mb-5">How Partnership Works</h2>
-              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our collaborative process to accelerate your B2B growth
+            <div className="mb-16">
+              <p className="text-xs font-mono tracking-widest text-blue-400 uppercase mb-5">PROSPECTING VS. INFRASTRUCTURE</p>
+              <h2 className="text-4xl lg:text-5xl font-bold">Searching vs. Being Found</h2>
+              <p className="mt-4 text-gray-500 font-mono text-sm">The best firms don't prospect. Their ideal clients route through them.</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-0 border border-gray-800 overflow-hidden">
+              <div className="p-10 border-b md:border-b-0 md:border-r border-gray-800 bg-gray-900/20">
+                <div className="flex items-center gap-3 mb-8 flex-wrap">
+                  <span className="text-xs font-mono text-gray-600 uppercase tracking-widest">Cold Prospecting</span>
+                  <span className="h-px flex-1 bg-gray-800 hidden sm:block"></span>
+                  <span className="text-xs font-mono text-gray-700 border border-gray-800 px-2 py-0.5 tracking-widest">INDIVIDUAL LEVEL</span>
+                </div>
+                <ul className="space-y-5 font-mono text-sm text-gray-600">
+                  {[
+                    "Build prospecting teams",
+                    "Buy contact databases",
+                    "Run cold outreach campaigns",
+                    "Pay per contact, no vetting",
+                    "Chase unqualified conversations",
+                    "Wait to be discovered",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="text-gray-800 mt-0.5">—</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="p-10 bg-black border-l-2 border-l-blue-500/60">
+                <div className="flex items-center gap-3 mb-8 flex-wrap">
+                  <span className="text-xs font-mono text-blue-400 uppercase tracking-widest">Optivous</span>
+                  <span className="h-px flex-1 bg-gray-800 hidden sm:block"></span>
+                  <span className="text-xs font-mono text-blue-400/50 border border-blue-400/20 px-2 py-0.5 tracking-widest">SYSTEMS LEVEL</span>
+                </div>
+                <ul className="space-y-5 font-mono text-sm text-white">
+                  {[
+                    "Qualified firms route to you",
+                    "Warm introductions, not cold contacts",
+                    "Pre-vetted against your exact ICP",
+                    "Access-based, not transaction-based",
+                    "Conversations that are ready to close",
+                    "You become the destination",
+                  ].map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <span className="text-blue-400 mt-0.5">→</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-px border border-t-0 border-gray-800 p-8 bg-gray-900/10">
+              <p className="text-center text-gray-600 font-mono text-xs leading-relaxed uppercase tracking-widest">
+                The fundamental shift — Banks don&apos;t search for capital, they attract and route it. World-class firms don&apos;t search for clients. Their clients route through them.
               </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
-              <div className="bg-white p-8 pb-12 rounded-xl border border-gray-200 w-96 mx-auto overflow-hidden">
-                <div className="flex flex-col items-start mb-6">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xl px-4 mb-6">
-                    1
-                  </div>
-                  <h3 className="text-xl font-semibold mt-6">
-                    Growth Discovery
-                  </h3>
-                </div>
-                <p className="text-gray-600 break-words">
-                  We dive deep into your goals, challenges, and vision.
-                  Together, we identify the biggest growth opportunities and
-                  align on a shared roadmap.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 pb-12 rounded-xl border border-gray-200 w-96 mx-auto overflow-hidden">
-                <div className="flex flex-col items-start mb-6">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xl px-4 mb-6">
-                    2
-                  </div>
-                  <h3 className="text-xl font-semibold mt-6">
-                    Co-Design & Strategy
-                  </h3>
-                </div>
-                <p className="text-gray-600 break-words">
-                  We co-create a tailored growth plan, mapping out systems,
-                  automation, and strategies. You’re involved at every step as a
-                  true partner.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 pb-12 rounded-xl border border-gray-200 w-96 mx-auto overflow-hidden">
-                <div className="flex flex-col items-start mb-6">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 font-bold text-xl px-4 mb-6">
-                    3
-                  </div>
-                  <h3 className="text-xl font-semibold mt-6">
-                    Growth Execution & Support
-                  </h3>
-                </div>
-                <p className="text-gray-600 break-words">
-                  We implement, optimize, and support your systems—staying by
-                  your side as your growth partner, not just a vendor. Our
-                  success is measured by your results.
-                </p>
-              </div>
-            </div>
-
-            <div className="mt-12 text-center">
-              <a
-                href="#contact"
-                className="rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg hover:bg-blue-500 transition-colors inline-block"
-              >
-                Start Your Growth Journey
-              </a>
             </div>
           </div>
         </div>
 
-        {/* <CaseStudies /> */}
-
+        {/* FAQ */}
         <div id="faq">
           <FAQ />
         </div>
 
-        {/* Add the contact section with an id that matches the href in your "Get Started" button */}
+        {/* Contact */}
         <div id="contact">
           <ContactExperts />
         </div>
+
       </main>
       <Footer />
     </>

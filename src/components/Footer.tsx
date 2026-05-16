@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
+import optivousLogo from "@/optivous-full-light-1600.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,9 +10,12 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="flex flex-col md:flex-row justify-between items-start gap-10">
           <div>
-            <Link href="/" className="text-xl font-extrabold">
-              <span className="text-white">Optiv</span>
-              <span className="text-blue-400">ous</span>
+            <Link href="/" aria-label="Optivous" className="inline-block">
+              <Image
+                src={optivousLogo}
+                alt="Optivous"
+                className="h-8 w-auto"
+              />
             </Link>
             <p className="mt-3 text-gray-600 text-sm font-mono max-w-xs leading-relaxed">
               Connecting B2B executives with their ideal clients.
@@ -82,7 +87,7 @@ const Footer = () => {
             </Link>
           </p>
           <p className="text-xs text-gray-800 font-mono tracking-widest uppercase">
-            Introduction Infrastructure • Not an Agency
+            Introduction Infrastructure
           </p>
         </div>
       </div>

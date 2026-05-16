@@ -15,7 +15,7 @@ export default function Home() {
           <div className="max-w-4xl">
             <div className="mb-10">
               <span className="text-xs font-mono tracking-widest text-blue-400 uppercase border border-blue-400/30 px-3 py-1.5">
-                INTRODUCTION INFRASTRUCTURE • NOT AN AGENCY
+                INTRODUCTION INFRASTRUCTURE
               </span>
             </div>
             <h1 className="text-6xl sm:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.05] mb-10">
@@ -74,7 +74,7 @@ export default function Home() {
                 The Right Clients.<br />Routed to You.
               </h2>
               <p className="mt-6 text-base text-gray-500 max-w-2xl font-mono leading-relaxed">
-                Recruitment firms, wealth managers, and biotech companies access a curated network of qualified opportunities—without prospecting teams, ad spend, or cold outreach.
+                Private Equity · Wealth · Banking · AI · Healthcare · Recruitment
               </p>
             </div>
 

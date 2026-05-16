@@ -2,7 +2,9 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import optivousLogo from "@/optivous-full-light-1600.png";
 
 const navigation = [
   { name: "Network", href: "/#network" },
@@ -21,17 +23,13 @@ export default function Navbar() {
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link
-            href="/"
-            className="-m-1.5 p-1.5 flex items-center space-x-2 text-2xl font-extrabold"
-          >
-            <svg className="h-7 w-7 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-            </svg>
-            <div className="flex items-center">
-              <span className="text-white">Optiv</span>
-              <span className="text-blue-400">ous</span>
-            </div>
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center" aria-label="Optivous">
+            <Image
+              src={optivousLogo}
+              alt="Optivous"
+              priority
+              className="h-7 w-auto"
+            />
           </Link>
         </div>
 

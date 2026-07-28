@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import optivousLogo from "@/optivous-full-light-1600.png";
 
 const navigation = [
-  { name: "About", href: "/#about" },
-  { name: "Services", href: "/#services" },
-  { name: "Case Studies", href: "/#case-studies" },
+  { name: "Network", href: "/#network" },
+  { name: "Protocol", href: "/#protocol" },
+  { name: "Metrics", href: "/#metrics" },
   { name: "FAQ", href: "/#faq" },
 ];
 
@@ -15,43 +17,26 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="fixed w-full bg-white/80 backdrop-blur-md z-50 border-b">
+    <header className="fixed w-full bg-black/90 backdrop-blur-md z-50 border-b border-gray-800">
       <nav
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
         aria-label="Global"
       >
         <div className="flex lg:flex-1">
-          <Link
-            href="/"
-            className="-m-1.5 p-1.5 flex items-center space-x-2 text-2xl font-extrabold"
-          >
-            <svg
-              className="h-8 w-8 text-blue-600"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M13 10V3L4 14h7v7l9-11h-7z"
-              />
-            </svg>
-            <div className="flex items-center">
-              <span className="bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent">
-                Optiv
-              </span>
-              <span className="text-gray-900">ous</span>
-            </div>
+          <Link href="/" className="-m-1.5 p-1.5 flex items-center" aria-label="Optivous">
+            <Image
+              src={optivousLogo}
+              alt="Optivous"
+              priority
+              className="h-7 w-auto"
+            />
           </Link>
         </div>
 
-        {/* Mobile menu button */}
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5"
+            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-400"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <span className="sr-only">Open main menu</span>
@@ -63,13 +48,12 @@ export default function Navbar() {
           </button>
         </div>
 
-        {/* Desktop menu */}
         <div className="hidden lg:flex lg:gap-x-12">
           {navigation.map((item) => (
             <Link
               key={item.name}
               href={item.href}
-              className="text-base font-semibold leading-6 hover:text-blue-600 transition-colors"
+              className="text-sm font-medium text-gray-400 hover:text-white transition-colors tracking-wider uppercase font-mono"
             >
               {item.name}
             </Link>
@@ -77,36 +61,39 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
-            href="#contact"
-            className="rounded-full bg-blue-600 px-4 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 transition-colors"
+          <a
+            href="https://cal.com/rehman.sajid/30min?overlayCalendar=true"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="border border-blue-400 px-5 py-2 text-sm font-semibold text-blue-400 hover:bg-blue-400 hover:text-black transition-all tracking-wider uppercase font-mono"
           >
-            Contact Us
-          </Link>
+            Request Access
+          </a>
         </div>
       </nav>
 
-      {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden">
+        <div className="lg:hidden bg-black border-t border-gray-800">
           <div className="space-y-1 px-4 pb-3 pt-2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block rounded-lg px-3 py-2 text-base font-semibold hover:bg-gray-50"
+                className="block rounded-lg px-3 py-2 text-base font-medium text-gray-400 hover:text-white font-mono"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}
               </Link>
             ))}
-            <Link
-              href="#contact"
-              className="block rounded-lg px-3 py-2 text-base font-semibold text-blue-600"
+            <a
+              href="https://cal.com/rehman.sajid/30min?overlayCalendar=true"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block px-3 py-2 text-base font-semibold text-blue-400 font-mono"
               onClick={() => setMobileMenuOpen(false)}
             >
-              Contact Us
-            </Link>
+              Request Access
+            </a>
           </div>
         </div>
       )}

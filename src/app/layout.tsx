@@ -13,16 +13,37 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Optivous | Sales, Marketing & CRM Systems for Digital Agencies",
+  title: "Optivous | Introduction Infrastructure",
   description:
-    "We help digital agencies book more meetings, sell more offers, and minimize bloat with automated sales, marketing, and CRM systems. Streamline your agency's growth with proven, done-for-you solutions.",
+    "Banks route capital. We route relationships. Optivous delivers pre-qualified introductions to recruitment firms, wealth managers, and biotech companies. 100+ routed.",
   keywords:
-    "digital agency, sales systems, marketing automation, CRM automation, agency systems, book more meetings, agency growth, project management automation, lead generation, client management",
+    "B2B introductions, B2B connections, qualified introductions, B2B infrastructure, ideal client profile, recruitment firm growth, RIA client acquisition, biotech partnerships",
+  metadataBase: new URL("https://optivous.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Optivous | Sales, Marketing & CRM Systems for Digital Agencies",
+    title: "Optivous | Introduction Infrastructure",
     description:
-      "Automated sales, marketing, and CRM systems for digital agencies. Book more meetings, sell more offers, and streamline your agency's growth.",
+      "Banks route capital. We route relationships. Optivous delivers pre-qualified introductions to recruitment firms, wealth managers, and biotech companies.",
     type: "website",
+    url: "https://optivous.com",
+    siteName: "Optivous",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Optivous — Introduction Infrastructure",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Optivous | Introduction Infrastructure",
+    description:
+      "Banks route capital. We route relationships. Qualified introductions for recruitment firms, wealth managers, and biotech companies.",
+    images: ["/og-image.png"],
   },
 };
 
@@ -32,10 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-      </head>
+    <html lang="en" className="dark">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

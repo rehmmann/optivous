@@ -9,57 +9,59 @@ interface FAQItem {
 
 const faqData: FAQItem[] = [
   {
-    question: "What types of AI and data services do you offer?",
+    question: "What makes Optivous different from a traditional outreach agency?",
     answer:
-      "We offer a comprehensive range of services including data analytics and visualization, process automation, custom AI model development, predictive analytics, natural language processing solutions, and data infrastructure optimization. We can help with everything from basic automation to complex machine learning implementations.",
+      "Traditional agencies send you contact lists. We route qualified introductions. Our infrastructure-first model means every introduction has been pre-qualified against your ICP before it reaches you—no cold lists, no spray-and-pray campaigns.",
   },
   {
-    question: "How do you ensure data security and privacy?",
+    question: "How do you qualify connections before routing them?",
     answer:
-      "We follow industry best practices and compliance standards for data security. This includes encrypted data storage, secure access protocols, regular security audits, and strict adherence to data protection regulations like GDPR and CCPA. We sign NDAs and data processing agreements to ensure your information remains confidential.",
+      "Every signal passes through our multi-layer qualification filter: intent verification, ICP match scoring, budget validation, and authority confirmation. Only signals that clear all filters get routed to you as a warm introduction.",
   },
   {
-    question: "What's your typical project process?",
+    question: "What does 'connection infrastructure' mean in practice?",
     answer:
-      "Our process typically involves: 1) Initial consultation to understand your needs, 2) Data assessment and solution design, 3) Proof of concept development, 4) Full solution implementation, and 5) Ongoing support and optimization. We maintain clear communication throughout and ensure you're involved in key decisions.",
+      "It means we've built systematic processes for detecting buyer intent, matching signals to the right provider, and executing introductions—at scale. You don't get a list; you get warm, pre-qualified conversations already primed for your offering.",
   },
   {
-    question: "Do we need to have clean, organized data to work with you?",
+    question: "What industries and client profiles do you work with?",
     answer:
-      "No, we can help regardless of your data's current state. We have experience in data cleaning, structuring, and organization. Part of our service includes assessing your current data infrastructure and helping you establish better data practices.",
+      "We work with recruitment firms, biotech companies, investment advisors, and RIAs. We define your exact ICP—firm type, AUM range, headcount, decision-maker titles—and only route introductions that match your criteria.",
   },
   {
-    question: "How do you price your services?",
+    question: "How is pricing structured?",
     answer:
-      "Pricing varies based on project scope, complexity, and requirements. We offer both project-based and retainer pricing models. After our initial consultation, we provide detailed proposals with transparent pricing and deliverables.",
+      "We operate on an infrastructure access model—not pay-per-contact. This aligns our incentives: our success is measured by the quality and volume of introductions routed, not the number of raw contacts delivered.",
   },
   {
-    question: "How long does it take to see results?",
+    question: "How long before I start receiving qualified introductions?",
     answer:
-      "Timeline varies by project, but most clients see initial results within 1-3 months. Simple automation projects can show ROI within weeks, while more complex AI implementations might take 3-6 months to show full benefits. We set clear milestones and KPIs to track progress.",
+      "Most clients receive their first qualified introductions within 2–4 weeks of onboarding. The routing layer is calibrated to your ICP before we open the flow, ensuring quality from day one.",
   },
   {
-    question: "Do you provide training and support after implementation?",
+    question: "What does onboarding look like?",
     answer:
-      "Yes, we provide comprehensive training for your team and ongoing support post-implementation. This includes documentation, hands-on training sessions, and a support period to ensure smooth adoption of new systems.",
+      "We run a signal calibration session to map your ICP, define qualification criteria, and configure your routing pathway. This ensures every introduction that reaches you is pre-matched—not just pre-filtered.",
   },
   {
-    question: "Can you integrate with our existing systems?",
+    question: "Can I control the volume and pace of introductions?",
     answer:
-      "Yes, we design solutions that integrate with your existing technology stack. We have experience working with various databases, CRMs, ERPs, and other business systems. We can also help modernize legacy systems when needed.",
-  },
-  {
-    question: "What industries do you specialize in?",
-    answer:
-      "We work across various industries including finance, healthcare, retail, manufacturing, and professional services. Our solutions are customized to meet industry-specific requirements and compliance standards.",
-  },
-  {
-    question:
-      "What makes your AI solutions different from off-the-shelf products?",
-    answer:
-      "Our solutions are custom-built for your specific needs, data, and processes. Unlike generic solutions, we optimize for your unique business context, integrate with your existing workflows, and provide ongoing optimization based on your feedback and results.",
+      "Yes. You set the throughput capacity. Whether you want 5 or 50 introductions per month, the routing layer is configured to match your team's capacity to engage and close.",
   },
 ];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqData.map((item) => ({
+    "@type": "Question",
+    name: item.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: item.answer,
+    },
+  })),
+};
 
 export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -73,37 +75,31 @@ export default function FAQ() {
   };
 
   return (
-    <div className="bg-gray-50 py-24 sm:py-32">
+    <div className="bg-[#0a0a0a] py-28 border-b border-gray-800">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="mx-auto max-w-4xl text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Frequently Asked Questions
-          </h2>
-          <p className="mt-4 text-lg text-gray-600">
-            Find answers to common questions about our AI and automation
-            solutions
+        <div className="mb-16">
+          <p className="text-xs font-mono tracking-widest text-blue-400 uppercase mb-5">FAQ</p>
+          <h2 className="text-4xl font-bold text-white">Common Questions</h2>
+          <p className="mt-4 text-gray-400 font-mono text-sm">
+            Everything you need to know about the connection infrastructure.
           </p>
         </div>
-        <div className="mx-auto mt-16 grid grid-cols-1 lg:grid-cols-2 gap-8">
-          {/* Left Column */}
-          <div className="space-y-4">
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
+          <div className="space-y-3">
             {leftColumnFAQs.map((item, index) => (
-              <div key={index} className="mb-4">
+              <div key={index} className="border border-gray-800">
                 <button
                   onClick={() => handleClick(index)}
-                  className="flex w-full items-center justify-between rounded-lg bg-white px-4 py-5 text-left shadow-sm hover:bg-gray-50"
+                  className="flex w-full items-center justify-between px-5 py-4 text-left bg-gray-900/20 hover:bg-gray-900/50 transition-colors"
                 >
-                  <span className="font-medium text-gray-900">
-                    {item.question}
-                  </span>
-                  <span className="ml-6 flex-shrink-0 transition-transform duration-200">
-                    {openIndex === index ? (
-                      <span className="text-blue-600 transform rotate-180">
-                        −
-                      </span>
-                    ) : (
-                      <span className="text-gray-400">+</span>
-                    )}
+                  <span className="font-medium text-white text-sm">{item.question}</span>
+                  <span className="ml-6 flex-shrink-0 text-gray-500 font-mono text-lg">
+                    {openIndex === index ? "−" : "+"}
                   </span>
                 </button>
                 <div
@@ -111,33 +107,24 @@ export default function FAQ() {
                     openIndex === index ? "max-h-96" : "max-h-0"
                   }`}
                 >
-                  <div className="p-4 bg-white rounded-b-lg">
-                    <p className="text-gray-600">{item.answer}</p>
+                  <div className="px-5 py-4 border-t border-gray-800">
+                    <p className="text-gray-400 text-sm leading-relaxed font-mono">{item.answer}</p>
                   </div>
                 </div>
               </div>
             ))}
           </div>
 
-          {/* Right Column */}
-          <div className="space-y-4">
+          <div className="space-y-3">
             {rightColumnFAQs.map((item, index) => (
-              <div key={index + midPoint} className="mb-4">
+              <div key={index + midPoint} className="border border-gray-800">
                 <button
                   onClick={() => handleClick(index + midPoint)}
-                  className="flex w-full items-center justify-between rounded-lg bg-white px-4 py-5 text-left shadow-sm hover:bg-gray-50"
+                  className="flex w-full items-center justify-between px-5 py-4 text-left bg-gray-900/20 hover:bg-gray-900/50 transition-colors"
                 >
-                  <span className="font-medium text-gray-900">
-                    {item.question}
-                  </span>
-                  <span className="ml-6 flex-shrink-0 transition-transform duration-200">
-                    {openIndex === index + midPoint ? (
-                      <span className="text-blue-600 transform rotate-180">
-                        −
-                      </span>
-                    ) : (
-                      <span className="text-gray-400">+</span>
-                    )}
+                  <span className="font-medium text-white text-sm">{item.question}</span>
+                  <span className="ml-6 flex-shrink-0 text-gray-500 font-mono text-lg">
+                    {openIndex === index + midPoint ? "−" : "+"}
                   </span>
                 </button>
                 <div
@@ -145,8 +132,8 @@ export default function FAQ() {
                     openIndex === index + midPoint ? "max-h-96" : "max-h-0"
                   }`}
                 >
-                  <div className="p-4 bg-white rounded-b-lg">
-                    <p className="text-gray-600">{item.answer}</p>
+                  <div className="px-5 py-4 border-t border-gray-800">
+                    <p className="text-gray-400 text-sm leading-relaxed font-mono">{item.answer}</p>
                   </div>
                 </div>
               </div>

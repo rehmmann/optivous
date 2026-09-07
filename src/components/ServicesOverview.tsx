@@ -43,7 +43,7 @@ const steps = [
 
 export default function ServicesOverview() {
   return (
-    <section className="py-32 border-b border-stone-200 bg-ivory">
+    <section className="py-24 border-b border-stone-200 bg-ivory">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-16">
           <p className="text-xs font-mono tracking-widest text-navy-600 uppercase mb-5">THE PROTOCOL</p>

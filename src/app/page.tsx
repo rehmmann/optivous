@@ -34,7 +34,7 @@ export default function Home() {
       <main className="pt-16 bg-ivory text-ink">
 
         {/* Hero Section */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-52">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
           <div className="max-w-4xl">
             <div className="mb-10">
               <span className="text-xs font-mono tracking-widest text-navy-600 uppercase border border-navy-600/30 px-3 py-1.5">
@@ -85,7 +85,7 @@ export default function Home() {
         </div>
 
         {/* The Connection Layer */}
-        <div id="network" className="py-32 border-b border-stone-200">
+        <div id="network" className="py-24 border-b border-stone-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-16">
               <p className="text-xs font-mono tracking-widest text-navy-600 uppercase mb-5">THE CONNECTION LAYER</p>
@@ -153,7 +153,7 @@ export default function Home() {
         </div>
 
         {/* Old Way vs New Way */}
-        <div className="py-32 border-b border-stone-200 bg-ivory">
+        <div className="py-24 border-b border-stone-200 bg-ivory">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-16">
               <p className="text-xs font-mono tracking-widest text-navy-600 uppercase mb-5">PROSPECTING VS. INFRASTRUCTURE</p>
@@ -218,64 +218,70 @@ export default function Home() {
         </div>
 
         {/* Recent Work */}
-        <div id="work" className="py-28">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-xs font-mono tracking-widest text-navy-700 uppercase mb-10">Recent Work</p>
+        <div id="work" className="py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl">
+              <p className="text-xs font-mono tracking-widest text-navy-700 uppercase mb-10">Recent Work</p>
 
-            <div>
-              {recentWork.map((item) => (
-                <Link
-                  key={item.issue}
-                  href={item.href}
-                  className="block py-5 border-b border-stone-100 group"
-                >
-                  <div className="text-[17px] text-stone-800 group-hover:text-ink transition-colors font-serif">
-                    {item.title}
-                  </div>
-                  <div className="text-sm text-stone-600 font-mono mt-1">
-                    {item.client} — {item.result}
-                  </div>
-                </Link>
-              ))}
+              <div>
+                {recentWork.map((item) => (
+                  <Link
+                    key={item.issue}
+                    href={item.href}
+                    className="block py-5 border-b border-stone-100 group"
+                  >
+                    <div className="text-[17px] text-stone-800 group-hover:text-ink transition-colors font-serif">
+                      {item.title}
+                    </div>
+                    <div className="text-sm text-stone-600 font-mono mt-1">
+                      {item.client} — {item.result}
+                    </div>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
         {/* Founder Note */}
-        <div className="py-20 border-t border-stone-200">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-xs font-mono tracking-widest text-navy-700 uppercase mb-6">A note from Rehman</p>
-            <p className="text-[19px] text-stone-700 leading-[1.6] font-serif italic mb-8">
-              Currently accepting 2 new counterparties this quarter.
-            </p>
-            <a
-              href="https://cal.com/rehman.sajid/30min?overlayCalendar=true"
-              className="inline-flex items-center gap-2 bg-navy-700 px-6 py-3 text-xs font-mono tracking-widest text-ivory uppercase hover:bg-navy-800 transition-colors"
-            >
-              Book private consultation →
-            </a>
+        <div className="py-16 border-t border-stone-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl">
+              <p className="text-xs font-mono tracking-widest text-navy-700 uppercase mb-6">A note from Rehman</p>
+              <p className="text-[19px] text-stone-700 leading-[1.6] font-serif italic mb-8">
+                Currently accepting 2 new counterparties this quarter.
+              </p>
+              <a
+                href="https://cal.com/rehman.sajid/30min?overlayCalendar=true"
+                className="inline-flex items-center gap-2 bg-navy-700 px-6 py-3 text-xs font-mono tracking-widest text-ivory uppercase hover:bg-navy-800 transition-colors"
+              >
+                Book private consultation →
+              </a>
+            </div>
           </div>
         </div>
 
         {/* Contact */}
-        <div id="contact" className="py-28 border-t border-stone-200">
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
-            <p className="text-xs font-mono tracking-widest text-navy-700 uppercase mb-8">Contact</p>
-            <div className="flex flex-col gap-3 font-mono text-lg">
-              <a
-                href="mailto:rehman@getoptivous.com"
-                className="text-ink hover:text-navy-700 transition-colors w-fit"
-              >
-                rehman@getoptivous.com
-              </a>
-              <a
-                href="https://www.linkedin.com/company/optivous"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-stone-600 hover:text-navy-700 transition-colors w-fit"
-              >
-                linkedin.com/company/optivous
-              </a>
+        <div id="contact" className="py-20 border-t border-stone-200">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-2xl">
+              <p className="text-xs font-mono tracking-widest text-navy-700 uppercase mb-8">Contact</p>
+              <div className="flex flex-col gap-3 font-mono text-lg">
+                <a
+                  href="mailto:rehman@getoptivous.com"
+                  className="text-ink hover:text-navy-700 transition-colors w-fit"
+                >
+                  rehman@getoptivous.com
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/optivous"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-stone-600 hover:text-navy-700 transition-colors w-fit"
+                >
+                  linkedin.com/company/optivous
+                </a>
+              </div>
             </div>
           </div>
         </div>

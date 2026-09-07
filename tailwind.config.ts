@@ -49,7 +49,25 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
+  			},
+  			ink: '#1c1917',
+  			ivory: '#f1ece0',
+  			navy: {
+  				50: '#e6ecf3',
+  				100: '#c2d1e3',
+  				200: '#93aecb',
+  				300: '#5f87ac',
+  				400: '#3d6690',
+  				500: '#28496d',
+  				600: '#1c3652',
+  				700: '#132840',
+  				800: '#0c1c2d',
+  				900: '#08121e',
+  				950: '#050b15'
   			}
+  		},
+  		fontFamily: {
+  			serif: ['var(--font-serif)', 'Georgia', 'serif']
   		},
   		borderRadius: {
   			lg: 'var(--radius)',

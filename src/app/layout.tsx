@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Libre_Baskerville } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,8 +12,15 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const libreBaskerville = Libre_Baskerville({
+  variable: "--font-serif",
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
-  title: "Optivous | Introduction Infrastructure",
+  title: "Optivous | Research & Introductions",
   description:
     "Banks route capital. We route relationships. Optivous delivers pre-qualified introductions to recruitment firms, wealth managers, and biotech companies. 100+ routed.",
   keywords:
@@ -23,7 +30,7 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Optivous | Introduction Infrastructure",
+    title: "Optivous | Research & Introductions",
     description:
       "Banks route capital. We route relationships. Optivous delivers pre-qualified introductions to recruitment firms, wealth managers, and biotech companies.",
     type: "website",
@@ -34,13 +41,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Optivous — Introduction Infrastructure",
+        alt: "Optivous — Research & Introductions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Optivous | Introduction Infrastructure",
+    title: "Optivous | Research & Introductions",
     description:
       "Banks route capital. We route relationships. Qualified introductions for recruitment firms, wealth managers, and biotech companies.",
     images: ["/og-image.png"],
@@ -53,9 +60,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${libreBaskerville.variable} antialiased`}
       >
         {children}
       </body>

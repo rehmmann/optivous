@@ -7,7 +7,7 @@ export default function MarketingBudgetsCase() {
   return (
     <>
       <Navbar />
-      <article className="pt-20">
+      <article className="pt-16 bg-ivory">
         {/* Hero Section */}
         <div className="relative h-[60vh] min-h-[500px]">
           <Image
@@ -19,10 +19,10 @@ export default function MarketingBudgetsCase() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/30" />
           <div className="absolute bottom-0 left-0 right-0 p-8 max-w-7xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-ivory mb-4 leading-tight">
               Marketing Budgets Automation
             </h1>
-            <p className="text-xl text-white/90 font-light">
+            <p className="text-xl text-ivory/90 font-light">
               Client: Boutique Marketing Agency
             </p>
           </div>
@@ -33,10 +33,10 @@ export default function MarketingBudgetsCase() {
           <div className="space-y-12">
             {/* Challenge Section */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="font-serif text-3xl font-bold text-ink mb-6">
                 The Challenge
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
+              <p className="text-lg text-stone-700 leading-relaxed">
                 Manual, time-consuming process of managing client budgets across
                 multiple spreadsheets, leading to sync issues and
                 inefficiencies.
@@ -45,7 +45,7 @@ export default function MarketingBudgetsCase() {
 
             {/* Solution Section */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="font-serif text-3xl font-bold text-ink mb-6">
                 Our Solution
               </h2>
               <ul className="space-y-4">
@@ -56,9 +56,9 @@ export default function MarketingBudgetsCase() {
                 ].map((item, index) => (
                   <li
                     key={index}
-                    className="flex items-start text-lg text-gray-700"
+                    className="flex items-start text-lg text-stone-700"
                   >
-                    <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 mr-4 mt-1">
+                    <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-navy-100 text-navy-700 mr-4 mt-1">
                       {index + 1}
                     </span>
                     {item}
@@ -69,7 +69,7 @@ export default function MarketingBudgetsCase() {
 
             {/* Results Section */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Results</h2>
+              <h2 className="font-serif text-3xl font-bold text-ink mb-6">Results</h2>
               <ul className="space-y-4">
                 {[
                   "Saved 10+ hours per week of team time",
@@ -78,7 +78,7 @@ export default function MarketingBudgetsCase() {
                 ].map((result, index) => (
                   <li
                     key={index}
-                    className="flex items-center text-lg text-gray-700"
+                    className="flex items-center text-lg text-stone-700"
                   >
                     <span className="text-green-500 mr-4">
                       <svg
@@ -103,10 +103,10 @@ export default function MarketingBudgetsCase() {
 
             {/* Full Story Section */}
             <section>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              <h2 className="font-serif text-3xl font-bold text-ink mb-6">
                 Full Story
               </h2>
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+              <div className="space-y-6 text-lg text-stone-700 leading-relaxed">
                 <p>
                   Our client, a boutique marketing agency, used a very tedious,
                   manual process of managing their clients&apos; budgets.
@@ -128,10 +128,10 @@ export default function MarketingBudgetsCase() {
           </div>
 
           {/* Back Link */}
-          <div className="mt-16 border-t pt-8">
+          <div className="mt-16 border-t border-stone-200 pt-8">
             <Link
-              href="/#case-studies"
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 font-semibold transition-colors"
+              href="/#work"
+              className="inline-flex items-center text-navy-700 hover:text-ink font-semibold transition-colors"
             >
               <svg
                 className="w-5 h-5 mr-2"

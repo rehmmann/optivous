@@ -4,11 +4,11 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "Optivous",
     short_name: "Optivous",
-    description: "Introduction Infrastructure for B2B firms.",
+    description: "Research & Introductions for B2B firms.",
     start_url: "/",
     display: "standalone",
-    background_color: "#0a0a0a",
-    theme_color: "#0a0a0a",
+    background_color: "#f1ece0",
+    theme_color: "#f1ece0",
     icons: [
       {
         src: "/android-chrome-192x192.png",
